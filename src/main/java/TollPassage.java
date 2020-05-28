@@ -5,7 +5,7 @@ public class TollPassage {
 	
 	private final int stationId;
 	private final String licencePlate;
-	private final boolean cost;
+	private final double cost;
 	private final LocalDateTime timeOfPassage;
 	private final LocalDate dayOfPassage;
 	
@@ -25,7 +25,7 @@ public class TollPassage {
 		return licencePlate;
 	}
 	
-	public boolean isCost() {
+	public double isCost() {
 		return cost;
 	}
 	
