@@ -1,18 +1,16 @@
 public class TollStation {
 
+	private final String stationName;
 	private final int stationId;
-	private final int stationRingId;
 	
-	public TollStation(int stationId, int stationRingId) {
+	public TollStation(String stationName, int stationId) {
+		this.stationName = stationName;
 		this.stationId = stationId;
-		this.stationRingId = stationRingId;
 	}
 	
 	public int getStationId() {
 		return stationId;
 	}
 	
-	public int getStationRingId() {
-		return stationRingId;
-	}
+
 }

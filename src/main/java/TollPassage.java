@@ -6,15 +6,15 @@ public class TollPassage {
 	private final int stationId;
 	private final String licencePlate;
 	private final double cost;
-	private final LocalDateTime timeOfPassage;
+	private final int timeOfPassage;
 	private final LocalDate dayOfPassage;
 	
-	public TollPassage(int stationId, String licencePlate, boolean cost, LocalDateTime timeOfPassage, LocalDate dayOfPassage) {
+	public TollPassage(int stationId, String licencePlate, boolean rush) {
 		this.stationId = stationId;
 		this.licencePlate = licencePlate;
-		this.cost = cost;
-		this.timeOfPassage = timeOfPassage;
-		this.dayOfPassage = dayOfPassage;
+		this.cost = VehicleRegister.getInstance().findVehicle(licencePlate).getCost(rush);
+		this.timeOfPassage = LocalDateTime.now().getHour();
+		this.dayOfPassage = LocalDate.now();
 	}
 	
 	public int getStationId() {
@@ -29,7 +29,7 @@ public class TollPassage {
 		return cost;
 	}
 	
-	public LocalDateTime getTimeOfPassage() {
+	public int getTimeOfPassage() {
 		return timeOfPassage;
 	}
 	
