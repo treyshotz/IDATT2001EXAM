@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="JavadocGenerationManager">
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../IDATT1002 - Systemutvikling/team-14-software-engineering" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
